@@ -45,7 +45,7 @@ post '/email' => sub ($c) {
       from => 'Brittny.Tech Form Response <mailgun@sandbox11ee66a9e00240238a5244a9e63f30a0.mailgun.org>', 
       to => $MAILGUN_RECIPIENT, 
       subject => $subject, 
-      html => $html . " reply to from: " . $from
+      html => $html . " - Please reply to: " . $from
     ]);
     
     my $response = $ua->request($request);
